@@ -11,7 +11,7 @@ import org.springframework.http.MediaType;
 
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ParkingControllerTest {
+class ParkingControllerTest  {
     @LocalServerPort
     private int randomPort;
     @BeforeEach
@@ -24,7 +24,7 @@ class ParkingControllerTest {
                 .when()
                 .get("/parking")
                 .then()
-                .body("license[0]", Matchers.equalTo("DMS-11"))
+                .body("license[0]", Matchers.equalTo("WRT-5555"))
                 .extract().response().body().prettyPrint();
     }
 
